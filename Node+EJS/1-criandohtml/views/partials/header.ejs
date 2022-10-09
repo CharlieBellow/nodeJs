@@ -1,0 +1,18 @@
+<!-- aproveitando o header pra usar em todas as páginas que eu criar -->
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">EJS</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sobre">Sobre</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- chamando o objeto página inserido na pagina about -->
+  <p>Página: <%= typeof  pagina != 'undefined' ? pagina: 'Home' %></p>
+</header>

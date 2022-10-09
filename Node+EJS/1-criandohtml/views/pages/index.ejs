@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+ 
+<!-- incluindo os arquivos EJS que a gente separou pra aproveitar em todas as páginas.. agora é hora de aproveitar eles -->
+ <%- include('../partials/head'); %>
+  
+
+
+<body class="container">
+  <!-- aproveitando a header aqui nde é o lugar dele -->
+  <%- include('../partials/header', {pagina: 'Home'}); %>
+ 
+  <main>
+    <!-- corpo da página -->
+    <div class="jumbotron">
+      <h1>node com EJS</h1>
+      <p>vamos aprender a trabalhar com EJS</p>
+      <p><%= subtitle %></p>
+<!-- vai no site do bootstrapCDN (download) e procura por bootstrapCDN e copia esse link: <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> e depois adiciona as classes    -->
+<!-- criando o servidor:
+troca o nome do arquivo de .html para .ejs
+instala esses arquivos na pasta do projeto:
+$ npm install ejs
+$ npm install express 
+
+cria o arquivo server.js e chama o express lá no arquivo criado-->
+    </div>
+    <!-- foreach -->
+    <ul>
+      <% qualitys.forEach(function(quality){ %>
+        <li>
+          <strong><%= quality.title %></strong><%= quality.message %>
+        </li>
+     <% }) %>
+      
+      
+    </ul>
+  </main>
+  <!-- colocando o footer aqui onde é o lugar dele -->
+  <%- include('../partials/footer'); %>
+</body>

@@ -1,0 +1,21 @@
+<!-- criando uma nova página e menu-->
+<!-- pra abrir a gente usa o mesmo endereço do localhost e adiciona sobre  -->
+
+<!DOCTYPE html>
+<%- include('../partials/head'); %>
+
+<body class="container">
+  <%- include('../partials/header', {pagina: 'sobre'}); %>
+<!-- passando o objeto {pagina:'sobre'} -->
+<main>
+  <div class="jumbotron">
+    <h1>sobre mim</h1>
+    <p>oi isso é um texto sobre mim</p>
+  </div>
+</main>
+
+
+  <%- include('../partials/footer'); %>
+</body>
+
+</html>
